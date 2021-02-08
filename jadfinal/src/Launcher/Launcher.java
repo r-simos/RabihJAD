@@ -32,6 +32,22 @@ public class Launcher {
 			System.out.println(filtered2.get(i));
 		}
 		
+		System.out.println("Average age");
+		System.out.println(r.avgAge());
+		
+		System.out.println("Postcode");
+		ArrayList<Persons> postcode=r.getPostcode(94400);
+		for (Persons i:postcode)
+		{
+			System.out.println(i);
+		}
+		
+		System.out.println("Hair Color");
+		ArrayList<Persons> hairs = r.getColorHair("Black");
+		for (Persons i:hairs) {
+			System.out.println(i);
+		}
+		
 	}
 	
 

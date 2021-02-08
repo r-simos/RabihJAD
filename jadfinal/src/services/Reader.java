@@ -97,5 +97,56 @@ public class Reader {
 		return out;
 	}
 	
+	public double avgAge() throws IOException{
+		
+		ArrayList<Persons> pers = new ArrayList<>();
+		pers=getPersons();
+		int avg=0;
+		for (Persons i:pers) {
+			avg+=i.getAge();
+			
+		}
+		double result=avg/pers.size();
+		return result;
+	}
+	
+	
+	public ArrayList <Persons> getPostcode(int postcode) throws IOException{
+		
+		ArrayList<Persons> out = new ArrayList<>();
+		ArrayList<Persons> pers = getPersons();
+		
+		for (Persons i:pers) {
+			if (postcode == i.getPostalCode()) {
+				out.add(i);
+			}
+			
+		}
+		
+		
+		return out; 
+	}
+	
+	
+	
+	public ArrayList<Persons> getColorHair(String color) throws IOException{
+		
+		ArrayList<Persons>out = new ArrayList<>();
+		
+		ArrayList<Persons> pers = getPersons();
+		
+		for (Persons i:pers) {
+			if (color.equals(i.getHairColor())) {
+				out.add(i);
+			}
+			
+		}
+		
+		
+		
+		
+		return out;
+	}
+	
 
 }
