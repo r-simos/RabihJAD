@@ -12,7 +12,8 @@ public class Launcher {
 		
 		Reader r = new Reader();
 		ArrayList<Persons> pers =new ArrayList<>();
-		pers=r.getPersons();
+		pers=r.getFirstThree(10);
+		//pers=r.getPersons();
 		for (int i=0; i<pers.size();i++) {
 			System.out.println(pers.get(i));
 		}
