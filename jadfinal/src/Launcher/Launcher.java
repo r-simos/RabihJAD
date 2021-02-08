@@ -18,6 +18,20 @@ public class Launcher {
 			System.out.println(pers.get(i));
 		}
 		//System.out.println(pers.get(0));
+		
+		System.out.println("All greater than 21");
+		
+		ArrayList<Persons> filtered = r.getAgeGreaterThan(21);
+		for (int i=0; i<filtered.size();i++) {
+			System.out.println(filtered.get(i));
+		}		
+		System.out.println("All age greater than 21 and height greater than 185");
+		
+		ArrayList<Persons> filtered2 = r.getAgeAndHeightGreaterThan(21, 185);
+		for (int i=0; i<filtered2.size();i++) {
+			System.out.println(filtered2.get(i));
+		}
+		
 	}
 	
 

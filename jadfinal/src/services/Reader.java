@@ -72,5 +72,30 @@ public class Reader {
 		return out; 
 	}
 	
+	public ArrayList<Persons> getAgeGreaterThan(int val) throws IOException{
+		ArrayList<Persons> out = new ArrayList<>();
+		
+		ArrayList<Persons> all  = getPersons();
+		for(Persons i: all) {
+			if(i.getAge()>val)
+				out.add(i);
+		}
+		
+		
+		return out;
+	}	
+	public ArrayList<Persons> getAgeAndHeightGreaterThan(int age,double height) throws IOException{
+		ArrayList<Persons> out = new ArrayList<>();
+		
+		ArrayList<Persons> all  = getPersons();
+		for(Persons i: all) {
+			if(i.getAge()>age && i.getHeight()> height)
+				out.add(i);
+		}
+		
+		
+		return out;
+	}
+	
 
 }
